@@ -1,2 +1,2 @@
 # javascript-turing-machine
-Simple and complete Turing Machine made in javascipt and HTML
+Simple and complete Turing Machine made in Javascipt and HTML
