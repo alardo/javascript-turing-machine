@@ -1,4 +1,9 @@
 var times2;
+var rules = [];
+var currentState = 0;
+var currentPosition = 0;
+var counter = 0;
+var newSymbol = "B";
 $(document).ready(function(){
 	
 	//setRules($("#rules").text());
@@ -17,6 +22,24 @@ $(document).ready(function(){
 		
 		
 	});
+	$("#setNewSymbol").click(function(){
+		
+		
+		var symbol = $("#newSymbolChanger").val();
+		if(symbol.length == 1 && symbol != "" && symbol != " "){
+			
+			newSymbol = symbol;
+			alert("Symbol Setted");
+			
+		}else{
+			
+			alert("Error: Symbol not Valid");
+			
+		}
+		
+		
+	});
+	
 	$("#set").click(function(){
 		
 		
@@ -41,10 +64,6 @@ $(document).ready(function(){
 	});
 	
 	});
-var rules = [];
-var currentState = 0;
-var currentPosition = 0;
-var counter = 0;
 //var tape = $("textarea").text();
 //var len = tape.length;
 
@@ -63,7 +82,7 @@ function nextStep(){
 				if(currentPosition == (tape1.length-1)){
 					
 					////alert("UGUALE");
-					$("#machine").text(tape1+"B");
+					$("#machine").text(tape1+newSymbol);
 					////currentPosition++;
 					//console.log("tape+1");
 				}
@@ -114,7 +133,7 @@ function setRules(textRules){
 		rules.push(splitArray);
 	}
 	console.log(rules);
-	alert("Rules Set")
+	alert("Rules Setted")
 	
 	
 	
