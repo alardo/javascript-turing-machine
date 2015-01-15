@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game of Life Example</title>
+<script src='jquery-1.10.2.min.js'></script>
+<script src='script.js'></script>
+</head>
+<body>
+	<p id="machine">0000</p>
+	<p>|State|Current Symbol|New Symbol|Direction|New State|<br>0 0 1 r 0</p>
+	<textarea id="rules">0 0 1 r 0</textarea><br>
+	<input type="button" id="1step" value="1 Step"/>
+	<input type="button" id="autoStep" value="Auto Step"/>
+	<input type="button" id="stopStep" value="Stop Step"/>
+	<input type="button" id="set" value="SET Rules"/><br>
+	<input type="text" id="tapeChanger"/>
+	<input type="button" id="setTape" value="SET Tape"/>
+	<p id="counter"></p>
+	
+</body>
+</html>
